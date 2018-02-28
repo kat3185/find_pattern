@@ -1,3 +1,6 @@
 #!/bin/sh
+read input
+echo "$input"
 
+ruby find_pattern_script.rb $input
 echo "Sup Ken"
