@@ -7,7 +7,7 @@ class SmallestRepeatingPattern
   attr_reader :string
 
   def initialize(string)
-    raise ArgumentError, "Argument is not a string" unless string.is_a? String
+    raise ArgumentError, 'Argument is not a string' unless string.is_a? String
     @string = string
   end
 
@@ -46,10 +46,10 @@ class SmallestRepeatingPattern
   end
 
   def first_substring_segment(substrings, last_substring)
-    if substrings.length > 0
+    if !substrings.empty?
       substrings.first[0...last_substring.length]
     else
-      ""
+      ''
     end
   end
 end
@@ -58,17 +58,17 @@ ARGV.each do |input|
   puts SmallestRepeatingPattern.find(input)
 end
 
-examples = [
-  "ababababab",
-  "accaccaccacc",
-  "1233211233211",
-  "0001000100",
-  "1234567",
-  "ababdbabb",
-  "ababcabab",
-  "1232123",
-  "aaaabaa"
-]
+examples = %w(
+  ababababab
+  accaccaccacc
+  1233211233211
+  0001000100
+  1234567
+  ababdbabb
+  ababcabab
+  1232123
+  aaaabaa
+)
 
 puts "\nAnswers match for examples:"
 
