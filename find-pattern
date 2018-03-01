@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# example uses:
-# ./find-pattern lolol
-# echo haha | ./find-pattern
-
 if [ -z "$1" ]; then
   read input
 else
