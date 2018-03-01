@@ -1,6 +1,13 @@
 #!/bin/sh
-read input
-echo "$input"
+
+# example uses:
+# ./find-pattern lolol
+# echo haha | ./find-pattern
+
+if [ -z "$1" ]; then
+  read input
+else
+  input=$1
+fi
 
 ruby find_pattern_script.rb $input
-echo "Sup Ken"
